@@ -26,3 +26,7 @@ Google Chrome
 ## Acknowledgments
 
 * **Udacity** - *Initial work*
+
+## License
+
+* **MIT**
