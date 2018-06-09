@@ -22,13 +22,13 @@ class Movie():
 
     def movie_api_url(self):
         """"Constructs and returns TMDb movie api url"""
-        return "https://api.themoviedb.org/3/movie/{}?api_key={}"
-        .format(self.movie_id, Movie.api_key)
+        return "https://api.themoviedb.org/3/movie/{}?api_key={}" \
+            .format(self.movie_id, Movie.api_key)
 
     def config_api_url(self):
         """"Constructs and returns TMDb configuration api url"""
-        return "https://api.themoviedb.org/3/configuration?api_key={}"
-        .format(Movie.api_key)
+        return "https://api.themoviedb.org/3/configuration?api_key={}" \
+            .format(Movie.api_key)
 
     def movie_json(self):
         """"Returns TMDb movie json response"""
@@ -51,9 +51,9 @@ class Movie():
 
     def trailer_youtube_url(self):
         """"Returns movie trailer youtube url"""
-        video_api_url =
-        "https://api.themoviedb.org/3/movie/{}/videos?api_key={}"
-        .format(self.movie_id, Movie.api_key)
+        video_api_url = \
+            "https://api.themoviedb.org/3/movie/{}/videos?api_key={}" \
+            .format(self.movie_id, Movie.api_key)
         video_api_url = video_api_url.format(self.movie_id)
         json = requests.get(video_api_url).json()
         youtube_id = json["results"][0]["key"]
